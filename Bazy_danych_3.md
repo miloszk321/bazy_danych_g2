@@ -34,3 +34,4 @@ WHERE MONTH(dataPozyskania) IN (7, 8);
 select * from zasob
 where rodzaj is not null order by waga asc;
 #3
+
