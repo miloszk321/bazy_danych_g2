@@ -45,8 +45,13 @@ where idKreatury not in
 where idKreatury is not null);
 ```
 Zadanie 4
+#1
 ```sql
-
+select k.nazwa, z.nazwa from kreatura k natural join ekwipunek e natural join zasob z where k.rodzaj='wiking' and year(dataur) between 1670 and 1679;
+```
+#2
+```sql
+select k.nazwa from kreatura k inner join ekwipunek e on k.idkreatury=e.idkreatury inner join zasob z on e.idZasobu=z.idzasobu where z.rodzaj='jedzenie' order by year(now())-year(dataur) limit 5;
 ```
 #3
 ```sql
